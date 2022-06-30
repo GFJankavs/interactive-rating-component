@@ -13,6 +13,10 @@ const choiceHandler = (e) => {
 };
 
 const submitHandler = () => {
+  if (typeof selectedChoice !== 'number') {
+    return;
+  }
+
   const selectionContainer = document.querySelector('#container__main');
   const resultContainer = document.querySelector('#container__result');
   const resultTextContainer = document.querySelector('.result__container');
